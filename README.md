@@ -105,3 +105,256 @@
     <script src="script.js"></script>
 </body>
 </html>
+/* Global Styles */
+:root {
+    --primary: #0A2463;
+    --secondary: #FFFFFF;
+    --accent: #FFD700;
+    --text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--secondary);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--secondary);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 150px 0 100px;
+    background: linear-gradient(135deg, var(--primary), #1a3a8f);
+    color: var(--secondary);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profession {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.bio {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 20px 20px 10px;
+    color: var(--primary);
+}
+
+.project-card p {
+    padding: 0 20px 20px;
+}
+
+.project-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 0;
+    background-color: #f5f7fa;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+}
+
+.about p {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 80px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
